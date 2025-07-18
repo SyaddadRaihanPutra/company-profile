@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="min-h-screen bg-background">
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-80 border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+                <a href="/"
+                    class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-pink-500 bg-clip-text text-transparent">
+                    Rayterton
+                </a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="/index.html"
+                        class="text-indigo-600 font-semibold hover:text-indigo-700 transition">Beranda</a>
+                    <a href="/services.html" class="text-gray-900 hover:text-indigo-600 transition">Layanan</a>
+                    <a href="/solutions.html" class="text-gray-900 hover:text-indigo-600 transition">Solusi</a>
+                    <a href="/about.html" class="text-gray-900 hover:text-indigo-600 transition">Tentang</a>
+                    <a href="/contact.html" class="text-gray-900 hover:text-indigo-600 transition">Kontak</a>
+                    <button
+                        class="flex items-center space-x-2 px-3 py-2 rounded border border-gray-300 hover:bg-gray-100 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                            <path d="M2 12h20"></path>
+                        </svg>
+                        <span class="text-sm font-medium">🇮🇩</span>
+                    </button>
+                </div>
+                <button class="md:hidden p-2 rounded hover:bg-gray-100 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <line x1="4" y1="6" x2="20" y2="6"></line>
+                        <line x1="4" y1="12" x2="20" y2="12"></line>
+                        <line x1="4" y1="18" x2="20" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <section class="pt-24 pb-16 relative overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+                style="background-image: url('/assets/about-bg-TQgk7NGb.jpg');"></div>
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-5xl sm:text-6xl font-bold mb-6">
+                    <span
+                        class="bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent">
+                        Tentang Kami
+                    </span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    Didirikan pada tahun 2003, Rayterton menyediakan perangkat lunak IT, server, produk perangkat keras
+                    dan solusi teknologi untuk banyak perusahaan.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gradient-to-r from-blue-50 to-purple-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center group">
+                        <div
+                            class="text-blue-600 mb-4 group-hover:scale-110 transition-transform duration-300 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-8 h-8">
+                                <path d="M8 2v4"></path>
+                                <path d="M16 2v4"></path>
+                                <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                                <path d="M3 10h18"></path>
+                            </svg>
+                        </div>
+                        <div class="text-4xl font-bold text-gray-900 mb-2">20+</div>
+                        <div class="text-gray-600">Years of Experience</div>
+                    </div>
+
+                    <div class="text-center group">
+                        <div
+                            class="text-blue-600 mb-4 group-hover:scale-110 transition-transform duration-300 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-8 h-8">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div class="text-4xl font-bold text-gray-900 mb-2">500+</div>
+                        <div class="text-gray-600">Enterprise Clients</div>
+                    </div>
+
+                    <div class="text-center group">
+                        <div
+                            class="text-blue-600 mb-4 group-hover:scale-110 transition-transform duration-300 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-8 h-8">
+                                <path
+                                    d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526">
+                                </path>
+                                <circle cx="12" cy="8" r="6"></circle>
+                            </svg>
+                        </div>
+                        <div class="text-4xl font-bold text-gray-900 mb-2">6</div>
+                        <div class="text-gray-600">Countries Served</div>
+                    </div>
+
+                    <div class="text-center group">
+                        <div
+                            class="text-blue-600 mb-4 group-hover:scale-110 transition-transform duration-300 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-8 h-8">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="6"></circle>
+                                <circle cx="12" cy="12" r="2"></circle>
+                            </svg>
+                        </div>
+                        <div class="text-4xl font-bold text-gray-900 mb-2">1000+</div>
+                        <div class="text-gray-600">Projects Completed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-6 text-foreground">Our Journey</h2>
+                    <p class="text-xl text-muted-foreground max-w-3xl mx-auto">Two decades of innovation and growth in
+                        the Southeast Asian technology landscape</p>
+                </div>
+                <div class="relative">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-border"></div>
+                    <div class="space-y-12">
+                        <div class="flex items-center flex-row">
+                            <div class="w-1/2 pr-8 text-right">
+                                <div
+                                    class="bg-gradient-card rounded-xl p-6 shadow-card hover:shadow-elegant transition-shadow duration-300">
+                                    <div class="text-2xl font-bold text-primary mb-2">2003</div>
+                                    <h3 class="text-xl font-semibold text-foreground mb-3">Company Founded</h3>
+                                    <p class="text-muted-foreground">Rayterton was established with a vision to provide
+                                        comprehensive IT solutions across Southeast Asia.</p>
+                                </div>
+                            </div>
+                            <div class="w-6 h-6 bg-primary rounded-full border-4 border-background shadow-lg z-10">
+                            </div>
+                            <div class="w-1/2"></div>
+                        </div>
+                        <div class="flex items-center flex-row-reverse">
+                            <div class="w-1/2 pl-8 text-left">
+                                <div
+                                    class="bg-gradient-card rounded-xl p-6 shadow-card hover:shadow-elegant transition-shadow duration-300">
+                                    <div class="text-2xl font-bold text-primary mb-2">2008</div>
+                                    <h3 class="text-xl font-semibold text-foreground mb-3">Regional Expansion</h3>
+                                    <p class="text-muted-foreground">Expanded operations to Malaysia, Singapore, and
+                                        Thailand, establishing local partnerships.</p>
+                                </div>
+                            </div>
+                            <div class="w-6 h-6 bg-primary rounded-full border-4 border-background shadow-lg z-10">
+                            </div>
+                            <div class="w-1/2"></div>
+                        </div>
+                        <div class="flex items-center flex-row">
+                            <div class="w-1/2 pr-8 text-right">
+                                <div
+                                    class="bg-gradient-card rounded-xl p-6 shadow-card hover:shadow-elegant transition-shadow duration-300">
+                                    <div class="text-2xl font-bold text-primary mb-2">2012</div>
+                                    <h3 class="text-xl font-semibold text-foreground mb-3">Cloud Services Launch</h3>
+                                    <p class="text-muted-foreground">Introduced Rayterton Cloud platform, pioneering
+                                        cloud services in the region.</p>
+                                </div>
+                            </div>
+                            <div class="w-6 h-6 bg-primary rounded-full border-4 border-background shadow-lg z-10">
+                            </div>
+                            <div class="w-1/2"></div>
+                        </div>
+                        <div class="flex items-center flex-row-reverse">
+                            <div class="w-1/2 pl-8 text-left">
+                                <div
+                                    class="bg-gradient-card rounded-xl p-6 shadow-card hover:shadow-elegant transition-shadow duration-300">
+                                    <div class="text-2xl font-bold text-primary mb-2">2016</div>
+                                    <h3 class="text-xl font-semibold text-foreground mb-3">Apps Software Suite</h3>
+                                    <p class="text-muted-foreground">Launched comprehensive Rayterton Apps Software for
+                                        enterprise management.</p>
+                                </div>
+                            </div>
+                            <div class="w-6 h-6 bg-primary rounded-full border-4 border-background shadow-lg z-10">
+                            </div>
+                            <div class="w-1/2"></div>
+                        </div>
+                        <div class="flex items-center flex-row">
+                            <div class="w-1/2 pr-8 text-right">
+                                <div
+                                    class="bg-gradient-card rounded-xl p-6 shadow-card hover:shadow-elegant transition-shadow duration-300">
+                                    <div class="text-2xl font-bold text-primary mb-2">2020</div>
+                                    <h3 class="text-xl font-semibold text-foreground mb-3">Digital Transformation</h3>
+                                    <p class="text-muted-foreground">Accelerated digital transformation services during
+                                        the global pandemic.</p>
+                                </div>
+                            </div>
+                            <div class="w-6 h-6 bg-primary rounded-full border-4 border-background shadow-lg z-10">
+                            </div>
+                            <div class="w-1/2"></div>
+                        </div>
+                        <div class="flex items-center flex-row-reverse">
+                            <div class="w-1/2 pl-8 text-left">
+                                <div
+                                    class="bg-gradient-card rounded-xl p-6 shadow-card hover:shadow-elegant transition-shadow duration-300">
+                                    <div class="text-2xl font-bold text-primary mb-2">2024</div>
+                                    <h3 class="text-xl font-semibold text-foreground mb-3">AI &amp; IoT Integration</h3>
+                                    <p class="text-muted-foreground">Integrated AI and IoT solutions into our service
+                                        portfolio for smart business operations.</p>
+                                </div>
+                            </div>
+                            <div class="w-6 h-6 bg-primary rounded-full border-4 border-background shadow-lg z-10">
+                            </div>
+                            <div class="w-1/2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-6 text-foreground">Our Values</h2>
+                    <p class="text-xl text-muted-foreground max-w-3xl mx-auto">The principles that guide our mission to
+                        deliver exceptional technology solutions</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div
+                        class="text-center group bg-background rounded-xl p-8 shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105">
+                        <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">🚀</div>
+                        <h3 class="text-xl font-bold text-foreground mb-4">Innovation</h3>
+                        <p class="text-muted-foreground leading-relaxed">Continuously advancing technology solutions to
+                            meet evolving business needs.</p>
+                    </div>
+                    <div
+                        class="text-center group bg-background rounded-xl p-8 shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105">
+                        <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">🛡️</div>
+                        <h3 class="text-xl font-bold text-foreground mb-4">Reliability</h3>
+                        <p class="text-muted-foreground leading-relaxed">Delivering consistent, dependable services with
+                            99.9% uptime guarantee.</p>
+                    </div>
+                    <div
+                        class="text-center group bg-background rounded-xl p-8 shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105">
+                        <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">🤝</div>
+                        <h3 class="text-xl font-bold text-foreground mb-4">Partnership</h3>
+                        <p class="text-muted-foreground leading-relaxed">Building long-term relationships with clients
+                            across Southeast Asia.</p>
+                    </div>
+                    <div
+                        class="text-center group bg-background rounded-xl p-8 shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105">
+                        <div class="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">⭐</div>
+                        <h3 class="text-xl font-bold text-foreground mb-4">Excellence</h3>
+                        <p class="text-muted-foreground leading-relaxed">Maintaining the highest standards in every
+                            project and service delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold text-white mb-6">Siap Bermitra dengan Kami?</h2>
+                <p class="text-xl text-white/80 mb-8">
+                    Bergabunglah dengan ratusan perusahaan yang mempercayai Rayterton untuk kebutuhan teknologi mereka
+                </p>
+                <button
+                    class="px-8 py-4 bg-white text-purple-600 rounded-lg font-semibold text-lg hover:bg-white/90 transition-colors duration-300">
+                    Kontak
+                </button>
+            </div>
+        </section>
+
+
+        <footer class="bg-foreground text-background py-16">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="col-span-1">
+                        <h3 class="text-2xl font-bold mb-4 text-slate-500">Rayterton
+                        </h3>
+                        <p class="text-background/80 mb-6 leading-relaxed">Transforming Singapore businesses with
+                            innovative technology solutions that drive growth and success.</p>
+                        <div class="flex space-x-4"><a href="#"
+                                class="text-background/60 hover:text-background transition-colors"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-twitter h-5 w-5">
+                                    <path
+                                        d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                                    </path>
+                                </svg></a><a href="#"
+                                class="text-background/60 hover:text-background transition-colors"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-github h-5 w-5">
+                                    <path
+                                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                                    </path>
+                                    <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                                </svg></a><a href="#"
+                                class="text-background/60 hover:text-background transition-colors"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-linkedin h-5 w-5">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect width="4" height="12" x="2" y="9"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg></a><a href="#"
+                                class="text-background/60 hover:text-background transition-colors"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-mail h-5 w-5">
+                                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                </svg></a></div>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Product</h4>
+                        <ul class="space-y-2 text-background/80">
+                            <li><a href="#" class="hover:text-background transition-colors">Features</a></li>
+                            <li><a href="#" class="hover:text-background transition-colors">Pricing</a></li>
+                            <li><a href="#" class="hover:text-background transition-colors">API</a></li>
+                            <li><a href="#" class="hover:text-background transition-colors">Documentation</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Company</h4>
+                        <ul class="space-y-2 text-background/80">
+                            <li><a href="#" class="hover:text-background transition-colors">About</a></li>
+                            <li><a href="#" class="hover:text-background transition-colors">Blog</a></li>
+                            <li><a href="#" class="hover:text-background transition-colors">Careers</a></li>
+                            <li><a href="#" class="hover:text-background transition-colors">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Support</h4>
+                        <ul class="space-y-2 text-background/80">
+                            <li><a href="#" class="hover:text-background transition-colors">Help Centre</a></li>
+                            <li><a href="#" class="hover:text-background transition-colors">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-background transition-colors">Terms of Service</a></li>
+                            <li><a href="#" class="hover:text-background transition-colors">Status</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-background/20 mt-12 pt-8 text-center">
+                    <p class="text-background/60">© 2024 YourBrand. All rights reserved. Made with ❤️ for Singapore
+                        businesses.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
