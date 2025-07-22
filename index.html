@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rayterton Indonesia</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <style>
+        .slider-bg {
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease-in-out;
+        }
+
+        .fade-overlay {
+            backdrop-filter: blur(3px);
+            background-color: rgba(32, 32, 32, 0.568);
+        }
+    </style>
 </head>
 
 <body>
@@ -44,28 +57,30 @@
             </div>
         </nav>
 
-        <section
-            class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-100 via-white to-indigo-50">
-            <div class="absolute inset-0 z-0">
-                <img src="/assets/hero-bg-BpqNURYh.jpg" alt="Hero background"
-                    class="w-full h-full object-cover opacity-20">
-                <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-purple-500/10">
-                </div>
+        <section x-data="backgroundSlider()" x-init="start()"
+            :style="'background-image: url(' + images[currentIndex] + ')'"
+            class="slider-bg relative min-h-screen flex items-center justify-center overflow-hidden">
+
+            <!-- Gradient and blur overlay -->
+            <div class="absolute inset-0 z-0 fade-overlay"></div>
+            <div class="absolute inset-0 z-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-purple-500/10">
             </div>
 
-            <div class="relative z-10 container mx-auto px-6 text-center">
+            <!-- Main Content -->
+            <div class="relative z-10 container mx-auto px-6 text-center mt-20">
                 <div class="max-w-4xl mx-auto">
                     <div
                         class="inline-flex items-center px-4 py-2 rounded-full bg-indigo-100 border border-indigo-200 text-indigo-700 text-sm font-medium mb-8 animate-fade-in">
                         ✨ Introducing Seamless Integration
                     </div>
-                    <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-slide-up">
+                    <h1 class="text-5xl text-white md:text-7xl font-bold mb-6 animate-slide-up">
                         Transform Your Digital Vision Into Reality
                     </h1>
-                    <p class="text-xl md:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in"
+                    <p class="text-xl md:text-2xl text-slate-100 text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in"
                         style="animation-delay: 0.2s;">
                         Unlock the power of seamless integration with real-time analytics and localized support team
-                        designed to elevate your business to new heights.
+                        designed to
+                        elevate your business to new heights.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in"
                         style="animation-delay: 0.4s;">
@@ -88,29 +103,59 @@
                         </button>
                     </div>
 
+                    <!-- Stats -->
                     <div class="grid grid-cols-3 gap-8 mt-16 animate-fade-in" style="animation-delay: 0.6s;">
                         <div class="text-center">
-                            <div class="text-3xl md:text-4xl font-bold text-indigo-600 mb-2">10K+</div>
-                            <div class="text-gray-600">Happy Clients</div>
+                            <div class="text-3xl md:text-4xl font-bold text-indigo-300 mb-2">10K+</div>
+                            <div class="text-slate-100">Happy Clients</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-3xl md:text-4xl font-bold text-indigo-600 mb-2">99.9%</div>
-                            <div class="text-gray-600">Uptime</div>
+                            <div class="text-3xl md:text-4xl font-bold text-indigo-300 mb-2">99.9%</div>
+                            <div class="text-slate-100">Uptime</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-3xl md:text-4xl font-bold text-indigo-600 mb-2">24/7</div>
-                            <div class="text-gray-600">Support</div>
+                            <div class="text-3xl md:text-4xl font-bold text-indigo-300 mb-2">24/7</div>
+                            <div class="text-slate-100">Support</div>
                         </div>
+                    </div>
+
+                    <!-- Slider Dots -->
+                    <div class="mt-32 flex justify-center space-x-2">
+                        <template x-for="(image, index) in images" :key="index">
+                            <button @click="goTo(index)"
+                                :class="index === currentIndex ? 'bg-indigo-600' : 'bg-gray-300 hover:bg-gray-400'"
+                                class="w-4 h-4 rounded-full transition-all duration-300"></button>
+                        </template>
                     </div>
                 </div>
             </div>
 
-            <!-- Decorative floating blur elements -->
-            <div class="absolute top-1/4 left-10 w-20 h-20 bg-indigo-200 rounded-full blur-xl animate-pulse"></div>
-            <div class="absolute bottom-1/4 right-10 w-32 h-32 bg-purple-200 rounded-full blur-2xl animate-pulse"
-                style="animation-delay: 1s;"></div>
         </section>
 
+        <!-- Alpine.js Slider Logic -->
+        <script>
+            function backgroundSlider() {
+                return {
+                    images: [
+                        '/assets/slider/1.jpg',
+                        '/assets/slider/2.jpg',
+                        '/assets/slider/3.jpg'
+                    ],
+                    currentIndex: 0,
+                    interval: null,
+                    start() {
+                        this.interval = setInterval(() => {
+                            this.currentIndex = (this.currentIndex + 1) % this.images.length;
+                        }, 5000);
+                    },
+                    goTo(index) {
+                        this.currentIndex = index;
+                        clearInterval(this.interval);
+                        this.start(); // restart timer
+                    }
+                }
+            }
+        </script>
 
         <section id="services" class="py-20 bg-gradient-to-b from-gray-50 to-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
